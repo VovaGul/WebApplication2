@@ -15,7 +15,12 @@ namespace WebApplication2.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(new CalculatorForm());
+        }
+
+        public IActionResult Calculated(CalculatorForm calculatorForm)
+        {
+            return null;
         }
 
         public IActionResult Privacy()
