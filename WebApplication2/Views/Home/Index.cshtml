@@ -6,6 +6,8 @@
 
 <form asp-controller="Home" asp-action="Calculated" method="post">
     LoanAmount:  <input asp-for="@Model.LoanAmount" /> <br />
+    LoanTerm:  <input asp-for="@Model.LoanTerm" /> <br />
+    InterestRate:  <input asp-for="@Model.InterestRate" /> <br />
     <button type="submit">Register</button>
 </form>
 <div class="text-center">
