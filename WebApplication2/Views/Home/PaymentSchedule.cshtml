@@ -12,7 +12,7 @@
     </tr>
     </thead>
     <tbody>
-        @foreach (var payment in @Model.Payments)
+    @foreach (var payment in @Model.Payments)
     {
         <tr>
             <td>@payment.Number</td>
@@ -25,3 +25,7 @@
     }
     </tbody>
 </table>
+
+<br/>
+Итоговое значение всех переплат по кредиту: @Model.TotalAmountOfAllOverpaymentsOnTheCredit
+
