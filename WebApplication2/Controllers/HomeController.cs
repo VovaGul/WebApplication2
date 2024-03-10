@@ -18,6 +18,17 @@ namespace WebApplication2.Controllers
             return View(new CalculatorForm());
         }
 
+        [HttpPost]
+        public IActionResult Index(CalculatorForm calculatorForm)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            return RedirectToAction("PaymentSchedule", calculatorForm);
+        }
+
+        [HttpPost]
         public IActionResult PaymentSchedule(CalculatorForm calculatorForm)
         {
             var paymentSchedule = WebApplication2.PaymentSchedule.Calculate(calculatorForm, DateTime.Now);

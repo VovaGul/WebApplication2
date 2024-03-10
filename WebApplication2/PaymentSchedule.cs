@@ -10,7 +10,7 @@ public class PaymentSchedule
     public PaymentSchedule(IReadOnlyList<Payment> payments)
     {
         Payments = payments;
-        TotalAmountOfAllOverpaymentsOnTheCredit = payments.Sum(payment => payment.AmountByInterest);
+        TotalAmountOfAllOverpaymentsOnTheCredit = Math.Round(payments.Sum(payment => payment.AmountByInterest), Payment.NumberOfSimbolsAfterComma);
     }
 
     public static PaymentSchedule Calculate(CalculatorForm calculatorForm, DateTime today)

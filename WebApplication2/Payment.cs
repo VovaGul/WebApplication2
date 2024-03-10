@@ -1,9 +1,12 @@
-﻿namespace WebApplication2;
+﻿using System.Diagnostics.Metrics;
+
+namespace WebApplication2;
 
 public class Payment
 {
     private static readonly int CountOfMonthsInAYear = 12;
     public static readonly int PaymentPeriodInMonths = 1;
+    public static readonly int NumberOfSimbolsAfterComma = 2;
 
     public int Number { get; }
     public DateTime Date { get; }
@@ -16,10 +19,10 @@ public class Payment
     {
         Number = number;
         Date = date;
-        Amount = amount;
-        AmountByBody = amountByBody;
-        AmountByInterest = amountByInterest;
-        ResidueCreditAmount = residueCreditAmount;
+        Amount = Math.Round(amount, NumberOfSimbolsAfterComma);
+        AmountByBody = Math.Round(amountByBody, NumberOfSimbolsAfterComma);
+        AmountByInterest = Math.Round(amountByInterest, NumberOfSimbolsAfterComma);
+        ResidueCreditAmount = Math.Round(residueCreditAmount, NumberOfSimbolsAfterComma);
     }
 
     public static Payment CreatePayment(int paymentNumber, CalculatorForm calculatorForm, DateTime today, IReadOnlyList<Payment> payments)
