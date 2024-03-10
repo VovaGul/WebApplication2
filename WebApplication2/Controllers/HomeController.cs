@@ -20,7 +20,7 @@ namespace WebApplication2.Controllers
 
         public IActionResult Calculated(CalculatorForm calculatorForm)
         {
-            var paymentSchedule = PaymentSchedule.Calculate(calculatorForm);
+            var paymentSchedule = PaymentSchedule.Calculate(calculatorForm, DateTime.Now);
             return null;
         }
 

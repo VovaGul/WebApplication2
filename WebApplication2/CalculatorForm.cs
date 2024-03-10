@@ -2,7 +2,7 @@
 
 public class CalculatorForm
 {
-    public decimal? LoanAmount { get; set; }
-    public int? LoanTerm { get; set; }
-    public decimal? InterestRate { get; set; }
+    public double CreditAmount { get; set; } = 10000;
+    public int CreditTermInMonths { get; set; } = 12;
+    public double YearCreditRate { get; set; } = 0.10;
 }
