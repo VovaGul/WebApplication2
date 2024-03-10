@@ -1,6 +1,4 @@
-﻿using System.Diagnostics.Metrics;
-
-namespace WebApplication2;
+﻿namespace WebApplication2.Models;
 
 public class Payment
 {

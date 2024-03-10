@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace WebApplication2;
+namespace WebApplication2.Models;
 
 public class CalculatorForm
 {
@@ -11,7 +11,7 @@ public class CalculatorForm
     [Range(0, int.MaxValue)]
     public int CreditTermInMonths { get; set; }
 
-    [Required] 
-    [Range(0.0, double.MaxValue)] 
+    [Required]
+    [Range(0.0, double.MaxValue)]
     public double YearCreditRate { get; set; }
 }

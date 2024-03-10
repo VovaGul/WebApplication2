@@ -31,7 +31,7 @@ namespace WebApplication2.Controllers
         [HttpPost]
         public IActionResult PaymentSchedule(CalculatorForm calculatorForm)
         {
-            var paymentSchedule = WebApplication2.PaymentSchedule.Calculate(calculatorForm, DateTime.Now);
+            var paymentSchedule = Models.PaymentSchedule.Calculate(calculatorForm, DateTime.Now);
             return View(paymentSchedule);
         }
 

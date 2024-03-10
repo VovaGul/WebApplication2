@@ -1,4 +1,4 @@
-﻿namespace WebApplication2;
+﻿namespace WebApplication2.Models;
 
 public class PaymentSchedule
 {
