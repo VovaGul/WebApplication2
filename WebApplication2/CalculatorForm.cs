@@ -1,8 +1,16 @@
-﻿namespace WebApplication2;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WebApplication2;
 
 public class CalculatorForm
 {
-    public double CreditAmount { get; set; } = 10000;
-    public int CreditTermInMonths { get; set; } = 12;
-    public double YearCreditRate { get; set; } = 0.10;
+    [Required]
+    [Range(0, double.MaxValue)]
+    public double CreditAmount { get; set; }
+    [Required]
+    [Range(0, int.MaxValue)]
+    public int CreditTermInMonths { get; set; } 
+    [Required]
+    [Range(0, double.MaxValue)]
+    public double YearCreditRate { get; set; } 
 }
