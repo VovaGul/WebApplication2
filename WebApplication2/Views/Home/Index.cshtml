@@ -4,7 +4,7 @@
 
 @model CalculatorForm
 
-<form asp-controller="Home" asp-action="Calculated" method="post">
+<form asp-controller="Home" asp-action="PaymentSchedule" method="post">
     Сумма займа:  <input asp-for="@Model.CreditAmount" /> <br />
     Срок займа (в месяцах):  <input asp-for="@Model.CreditTermInMonths" /> <br />
     Ставка (в год):  <input asp-for="@Model.YearCreditRate" /> <br />

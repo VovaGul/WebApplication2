@@ -18,10 +18,10 @@ namespace WebApplication2.Controllers
             return View(new CalculatorForm());
         }
 
-        public IActionResult Calculated(CalculatorForm calculatorForm)
+        public IActionResult PaymentSchedule(CalculatorForm calculatorForm)
         {
-            var paymentSchedule = PaymentSchedule.Calculate(calculatorForm, DateTime.Now);
-            return null;
+            var paymentSchedule = WebApplication2.PaymentSchedule.Calculate(calculatorForm, DateTime.Now);
+            return View(paymentSchedule);
         }
 
         public IActionResult Privacy()
