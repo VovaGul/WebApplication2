@@ -5,7 +5,7 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-// Пришлось использовать американскую локализацию из-за jquery https://github.com/dotnet/AspNetCore.Docs/issues/4076#issue-252296395
+// РџСЂРёС€Р»РѕСЃСЊ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ Р°РјРµСЂРёРєР°РЅСЃРєСѓСЋ Р»РѕРєР°Р»РёР·Р°С†РёСЋ РёР·-Р·Р° jquery https://github.com/dotnet/AspNetCore.Docs/issues/4076#issue-252296395
 app.UseRequestLocalization("en-US");
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
