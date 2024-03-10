@@ -4,6 +4,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+// Пришлось использовать американскую локализацию из-за jquery https://github.com/dotnet/AspNetCore.Docs/issues/4076#issue-252296395
 app.UseRequestLocalization("en-US");
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
